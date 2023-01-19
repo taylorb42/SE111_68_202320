@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Taylor B">
+    <meta name="description" content="W1 Demo">
+    <title>W1 | Demo</title>
+</head>
+<body>
+    <!---this is a comment in HTML--->
+    <!---the body holds ALL conent on the page-->
+
+    <h1 style="border:1px solid red">Heading 1</h1>
+    <h2 style="border:1px solid red">Heading 2</h1>
+    <h3 style="border:1px solid red">Heading 3</h1>
+    <h4 style="border:1px solid red">Heading 4</h1>
+    <h5 style="border:1px solid red">Heading 5</h1>
+    <h6 style="border:1px solid red">Heading 6</h1>
+    
+    <!--horizontal rule-->
+    <hr>
+
+    <!--paragraph tag-->
+    <p><strong>Hello</strong> <em>World!</em> This is my <b>first</b> <i>demo</i> in <u>SE111</u> :]</p>
+
+    <br>
+    <br>
+    <br>
+
+    <p>Hello World! This is my first demo in SE111 :]</p>   
+    
+    <hr>
+    <!--LISTIS - ordered lists and unordered lists-->
+    <div style="background-color:grey">
+
+        <h2>Lists</h2>
+
+        <ol><!--starts ordered list content-->
+            
+            <li>Tequiala</li>
+            <li>Cider</li>
+            <li>Orange Juice</li>
+        
+        </ol>
+
+        <ul>
+            <li style="border:1px solid red">Dasani</li>
+            <li>Polar Springs</li>
+            <li>Figi</li>
+
+        </ul>
+
+    </div>
+
+    <div>
+
+        <h1>taylor brown</h1>
+
+        <p>This is a <i>paragraph</i> about me :]</p>
+
+    </div>
+    
+</body>
+</html>
