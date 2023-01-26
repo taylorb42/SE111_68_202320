@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Taylor B">
+    <meta name="description" content="W2 HW">
+    <title>W2 | Bio</title>
+</head>
+
+
+<body>
+
+    <div>
+
+        <h1>Taylor's Bio</h1>
+
+        <h2>Bio</h2>
+    
+        <p>Hi, my name is Taylor, and I'm from new jersey. Some of my favorite hobbies are thrifting, video games, and music. I love being creative and learning new things. I’m really enjoying my time at New England tech and RI as a whole. Everyone I've met has been super nice and very helpful. I’m going for a cybersecurity major and I’m enjoying learning more and more about the technology I use every day. </p>
+
+    </div>
+
+    <div id="nav" class="border">
+
+        <a href="index.html" class="link">Home</a>
+        <a href="Schooling.html" class="link">Schooling</a>
+        <a href="Hobbies.html" class="link">Hobbies</a>
+
+    </div>
+
+    <div id="footer" class="border bg-main">
+
+        <p>&copy; 2023, T BROWN | SE111.02</p>
+
+    </div><!--/ #footer-->
+
+
+</body>
+
+</html>
