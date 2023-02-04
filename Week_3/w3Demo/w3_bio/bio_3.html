@@ -2,107 +2,109 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Taylor B">
-    <meta name="description" content="W2 HW">
-    <title>W2 | Bio</title>
+    <meta name="description" content="week 3 demo on classes">
+    <meta name="author" content="Taylor Brown">
+    <title>W3 | Demo</title>
 
+    <!--in-document styling to showcase id and class power-->
     <style>
+
+        /*now we're writing in CSS code*/
+        h1 {
+
+            /*border:1px solid blue;*/
+            text-align:center;
+            color:indigo;
+
+        }
+
         
-        /*in here we write in CSS*/
-        /*SELECTING in CSS & Javascript: select specific element(S) on a page
-            *by ELEMENT type      ex:body,div, p 
-            *by ID attribute      ex: #wrapper, #nav, #footer
-            *by CLASS attribute   ex: coming in week 3
+        .border {
 
-        */
+            /*border is a CLASS in the HTML, called in using a . */
 
-
-        div{
             border:1px solid black;
-            padding:10px; /*adds space between content & border of element*/
-            margin:5px; /*adds space between element and others*/
+            margin-bottom:10px;
         }
-        #nav, #footer {
-            background-color:lightgray;
+
+        #nav {
+            /*nav is an ID in the HTML, called in using a #   */
+
+            border:1px solid red;
+            text-align:center;
         }
-    
+
+        #wrapper {
+
+            width:900px;
+            margin:auto;/*adds equal space to left and right sides, requires a width value applied*/
+        }
+
+        .bg-main {
+
+            background-color:white;
+        }
+
+        .link {
+
+            font-size:26px;
+            text-decoration:none;
+            margin-right:15px;
+        }
+
+        #footer {
+
+            text-align:center;
+        }
     </style>
 
 </head>
-
-
-<body>
-
-
-    <div id="Header">
-
-        <h1>Taylor's Bio</h1>
+<body style="background-color:rgb(192, 191, 191)">
     
-    </div>
+    <!-- wrapper holds the entire page content-->
+    <div id="wrapper">
 
-    <div id="nav" class="border">
+        <!--header is content that loads first/at top of page-->
+        <!--header is usually a banner image or logo-->
+        <div id="header" class="border bg-main">
 
-        <a href="aboutme.html" class="link">About Me</a>
-        <a href="schools.html" class="link">Schools</a>
-        <a href="#Hobbies" class="link">Hobbies</a>
+            <!--name of the page-->
+            <h1 id="title">ABOUT PAGE</h1>
+            <!--h1 tags should only be used 1 time in a page-->
 
-    </div>
 
-    <div id="About Me">
+        </div><!--/ #header-->
 
-        <h2>About Me</h2>
-    
-        <p>Hi, my name is Taylor, and I'm from new jersey. Some of my favorite hobbies are thrifting, video games, and music. I love being creative and learning new things. I’m really enjoying my time at New England tech and RI as a whole. Everyone I've met has been super nice and very helpful. I’m going for a cybersecurity major and I’m enjoying learning more and more about the technology I use every day. </p>
+        <!--navigaion bar, holds the links to other pages-->
+        <div id="nav" class="border">
 
-    </div>
+            <a href="index.html" class="link">HOME</a>
+            <a href="about.html" class="link">ABOUT</a>
+            <a href="schooling.html" class="link">SCHOOLS</a>
+            <a href="hobbies.html" class="link">HOBBIES</a>
 
-    <div id="Schools">
-        <h2>Schools</h2>
-        <ol>
 
-            <li>New England Tech
-                <img src="../Week_3/w3Demo/images/NEIT.jpg" alt="Pitcure of New England Tech" style="width: 500px">
-            </li>
+        </div><!--/ #nav-->
 
-            <li>West Orange High School
-               <img src="../Week_3/w3Demo/images/WOHS2.jpg" alt="Pitcure of West Orange High School" style="width: 500px">
-            </li>
+        <!--main page content -- this usualy changes from page to page-->
+        <div id="content" class="border">
 
-            <li>Liberty Middle School
-                <img src="../Week_3/w3Demo/images/LMS.jpg" alt="Pitcure of West Orange High School" style="width: 500px">
-            </li>
-        </ol>
-    </div>
+            <p>content of page</p>
 
-    <div id="Hobbies">
-        <h2>Hobbies</h2>
-        <ul>
 
-            <li>Thrifting
-                <img src="../Week_3/w3Demo/images/Thrifting" alt="Pitcure of thrift store" style="width: 500px">
-            </li>
+        </div><!--/ #content-->
 
-            <li>Music
-                <img src="../Week_3/w3Demo/images/lizzo" alt="Pitcure of flute and spotify" style="width: 500px">
-            </li>
+        <!--footer - final section of page-->
+        <div id="footer" class="border bg-main">
 
-            <li>Video Games
-                <img src="../Week_3/w3Demo/images/overwtach2.jpg" alt="Pitcure of overwatch and karlson" style="width: 500px">
-            </li>
+            <p>&copy; 2023, Taylor Brown | SE111.02</p>
 
-        </ul>
-    </div>
+        </div><!--/ #footer-->
 
-    <div id="footer" class="border bg-main">
+    </div><!--/ #wrapper -->
 
-        <p>&copy; 2023, T BROWN | SE111.02</p>
 
-    </div><!--/ #footer-->
-
-    
 
 </body>
-
 </html>
