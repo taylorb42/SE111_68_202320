@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Taylor Brown">
+    <meta name="description" content="W5 Demo">
+    <title>W5 | Tables & Forms Demo</title>
+
+    <style>
+
+        table, tr, td{
+         border:1px solid black;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <h1>Basic Form Demo</h1>
+
+    <h2>Form w/o Table [boooooooooo yuuuuuuk]</h2>
+
+    <!--text: text fields for manual entry by user - value becomes what user types-->
+
+    <form>
+
+        <!--first name-->
+        <label for="firstname">First Name:</label>
+        <input type="text" name="firstname" id="first-name-input">
+
+        <!--Lables are used to match up with input elements
+        
+            for attribute value connects label element with input element
+            name atribute value connects input element with labe element
+        -->
+
+        <br>
+        <!--last name-->
+        <label for="lastname">Last Name:</label>
+        <input type="text" name="lastname" id="last-name-input">
+
+        <br>
+        <!--email-->
+        <label for="email">Email:</label>
+        <input type="text" name="email" id="email-input">
+
+        <br>
+        <!--submit button - reguired for any form with > 1 input field-->
+        <input type="submit" value="SUBMIT :]">
+
+
+    </form>
+
+    <h2>Form w/ Table [YAAAAAAY!!!]</h2>
+    <!--using tables to align and space data for ease of use-->
+
+    <!--FORM COMES FIRST!!!-->
+    <form method="GET" action="HTML/JS FILE NAME/">
+
+        <table>
+
+            <tbody><!--REQUIRED FOR ALL tables!!!!-->
+
+                <!--tbody is populated row by row, top down-->
+                <tr><!--table ROW: should inclube one <td></td> for every possible 
+                    column, leave blank when no ino for that column-->
+
+                    <td><!--label column-->
+                        <label for="firstname">First Name:</label>
+                    </td>
+
+                    <td><!--input column-->
+                        <input type="text" name="firstname" id="first-name-2-input">
+                    </td>
+
+                </tr>
+
+                <tr>
+
+                    <td><!--label column-->
+                        <label for="lastname">last Name:</label>
+                    </td>
+
+                    <td><!--input column-->
+                        <input type="text" name="lastname" id="last-name-2-input">
+                    </td>
+
+                </tr>
+
+                <tr>
+
+                    <td><!--label column-->
+                        <label for="email">Email:</label>
+                    </td>
+
+                    <td><!--input column-->
+                        <input type="text" name="email" id="email-2-input" maxlength="5" 
+                        placeholder="email@email.neit">
+                    </td>
+
+                </tr>
+
+                <!--NON-TEXT INPUT-->
+                <tr>
+
+                    <td>
+                        <label for="faveColor">Pick Your Favorite Color:</label>
+                    </td>
+
+                    <td>
+                        <!--drop-down selection options-->
+                        <select name="faveColor"><!--creating the drop down-->
+
+                            <!--each <option> element holds an opion to pick from the drop down-->
+                            <option value="red">RED</option>
+                            <option value="green">GREEN</option>
+                            <option value="blue">BLUE</option>
+
+                        </select>
+                    </td>
+
+                </tr>
+
+                <tr>
+
+                    <td>
+                        <label for="study">Program of Study</label>
+                    </td>
+
+                    <td>
+                        <input type="radio" name="study" value="SE">Software Engineering <br>
+                        <input type="radio" name="study" value="CYB">Cybersecurity <br>
+                        <input type="radio" name="study" value="WB">Web Development <br>
+                    </td>
+
+                </tr>
+
+
+                <tr>
+
+                    <td>
+                        <label for="date">Date: </label>
+                    </td>
+
+                    <td>
+                        <input type="date" name="date">
+                    </td>
+
+
+
+                </tr>
+
+                <tr>
+
+                    <td><!--label column-->
+                       
+                    </td>
+
+                    <td><!--input column-->
+                        <input type="submit" value="SUBMIT">
+                    </td>
+
+                </tr>
+
+                <!--checkboxes allow for MULTIPLE responses-->
+
+                <tr>
+
+                    <td>
+                        <label for="vehicle">Select Your Vehicles: </label>
+                    </td>
+
+                    <td>
+                        <input type="checkbox" name="vehicle1" value="car">CAR <br>
+                        <input type="checkbox" name="vehicle2" value="roci">ROCINANTE <br>
+                        <input type="checkbox" name="vehicle3" value="motorcycle">MOTORCYCLE <br>
+                        <input type="checkbox" name="vehicle4" value="bike">BICYCLE <br>
+                        <input type="checkbox" name="vehicle5" value="dragon">DRAGON <br>
+                        <input type="checkbox" name="vehicle1" value="horse">ROACH <br>
+
+                    </td>
+
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </form>
+
+</body>
+</html>
