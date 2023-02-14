@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Taylor Brown 202040">
+    <meta name="description" content="Week 6 JS Intro">
+    
+    <title>Week 6 | JS Intro</title>
+
+</head>
+
+<body>
+    <!--we should have some sort of HTML in the file-->
+    <h1>Week 6 Intro Demo | Javascript</h1>
+
+    <!--in document javascript-->
+
+    <script>
+        
+        //everything inside of the <script> tags must be written in JAVASCIPT
+        
+        //creating (declaring) a variable -- keyword "var"
+        var num1 = 10
+        var num2 = 7
+
+        //cannot use num1 or num2 until they have value assigned (=)
+        //variable assignment --> definition
+
+        var sum = num1 + num2
+
+        //test out value in console - 
+        console.log(num1,num2,sum)
+        console.log(sum)
+        
+        /*
+        //alert() allows for a pop-up in the browser page to display info to the user
+        //alert() ---> print() in python
+        alert(sum)
+        alert("the sum is: " + sum + "!")// displays string that 
+        alert(`the sum is: ${sum}!`)//literal strings :D
+
+        //escape sequences also wok in javascript
+        console.log(`the sum of \n${num1}\n+ \n${num2}\n=${sum}`)
+        alert(`the sum is:\n${sum}!`)
+        */
+
+        //prompts user for value; waits for ENTER key
+        //prompt() ---> input() in PYTHON
+
+        //use the value provided by the ser by ASSIGNINMENTS
+        var name = prompt(`Enter your name: `)
+
+        console.log(`Name entered: ${name}`)
+
+        //all data returned from prompt() is a STRING; must convert to Number() if we want to math
+        var num = Number(prompt (`Enter a number: `))
+        var square = Number(num) * Number(num)
+        
+        console.log(square.toFixed(2))
+
+    </script>
+
+
+</body>
+
+</html>
