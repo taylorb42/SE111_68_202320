@@ -19,113 +19,123 @@
 
 
 <body>
-    <h1>Basic Form Demo</h1>
+    <h1>Birthday Party Registion Form</h1>
 
-    <h2>Form w/o Table</h2>
-
-    <!--text fields for manual entry by user - value becomes what user types into box before submitting-->
-
-    <form>
-        <!--labels are used to match up with input elements-->
-        <!--
-            for attribute connects labels with input
-                MUST MATCH input's name attribute
-        -->
-        <label for="firstName">First Name: </label> 
-        <input type="text" name="firstName" id="firstName">
-
-        <!--form elements are inline, so use <br> so separate them-->
-        <br>
-
-        <label for="lastName">Last Name: </label> 
-        <input type="text" name="lastName" id="lastName">
-
-        <br>
-    
-        <!--
-            required attribute means user MUST fill in that element or form will not submit
-        -->
-
-        <label for="email">Email: </label> 
-        <input type="text" name="email" id="email" required>
-
-        <br>
-        <br>
-        <input type="submit" value="SUBMIT!">
-
-    </form>
-
-    <h2>Form w/ Table</h2>
-
-    <!--form comes FIRST!-->
     <form>
         <table>
-            <!--<thead> an be used for column headers-->
+                <thead>
 
+                    <td>
+                        <label for="labels"><b>Labels</b></label>
+                    </td>
+
+                    <td><!--first data cell in row (left)-->
+                        <label for="FormFields"><b>Form Fields</b></label>
+                    </td>
+
+                </thead>
             <!--<tbody> is REQUIRED inside of the <table>-->
                 <tbody>
                     <tr><!--table ROW; should include one <td> for every possible column, leave blank when no info for that row-->
 
                         <td><!--first data cell in row (left)-->
-                            <label for="firstName">First Name:</label>
+                            <label for="gfirst">Parent/Guardian Name:</label>
                         </td>
 
                         <td><!--second data cell in row (right)-->
-                            <input type="text" id="firstName" name="firstName" maxlength="50">
+                            <input type="text" required maxlength="20" name="gfirst" id="g-first" placeholder="First Name"><br>
+                            <input type="text" readonly maxlength="20" name="gfirst" id="g-last" placeholder="Last Name">
                         </td>
 
                     </tr>
 
                     <tr>
 
-                        <td>
-                            <label for="lastName">Last Name:</label>
+                        <td><!--first data cell in row (left)-->
+                            <label for="gfirst">Childs First Name:</label>
                         </td>
 
-                        <td>
-                            <input type="text" id="lastName" name="lastName" maxlength="50">
-                        </td>
-
-                    </tr>
-
-                    <tr>
-
-                        <td>
-                            <label for="email">Email:</label>
-                        </td>
-
-                        <td>
-                            <input type="text" id="email" name="email" maxlength="50">
+                        <td><!--second data cell in row (right)-->
+                            <input type="text" required maxlength="20" name="cfirst" id="c-first" placeholder="Child's First Name">
                         </td>
 
                     </tr>
 
                     <tr>
 
-                        <td>
-                            <label for="comments">Comments:</label>
-                        </td>
+                        <td><label>Child's Age:</label></td>
 
                         <td>
-                            <textarea name="comments" rows="10" cols="21" placeholder="Your comments here....">You can populate the textbox but user will need to delete</textarea>
+                            <input type="number" required name="age" value="3">
                         </td>
-
+                        
                     </tr>
 
-                    <!--non text input elements-->
-                    <!--
-                        select element creates a drop-down menu
-                    -->
                     <tr>
+                       <td>
+                            <b>
+                                <h2>
+                                    <lable>Date and Time</lable>
+                                </h2>
+                            </b>
+                        </td>
+                    </tr>
 
+                    <tr>
+                        <td><label>Date</label></td>
                         <td>
-                            <label for="faveColor">Pick Your Fave Color:</label>
+                            <input type="date" required name="date">
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td><label>Start Time</label></td>
+                        <td>
+                            <input type="time" required name="time">
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td><label>Number of Guests:</label></td>
+                        <td>
+                            <input type="number" name="guests" value="5">
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                             <b>
+                                 <h2>
+                                     <lable>Food</lable>
+                                 </h2>
+                             </b>
                         </td>
 
                         <td>
-                            <!--similar to list types: containing element and then indiv options from menu-->
+                            <input type="radio" name="size" value="sm">sm
+                            <input type="radio" name="size" value="med">med
+                            <input type="radio" name="size" value="lg">lg
+                        </td>
+                    </tr>
 
-                            <!--each option must have a value attribute so data can be passed from form accurately-->
+                    <tr>
+                        <td>
+                            <label for="drinks">Drinks:</label>
+                        </td>
+
+                        <td>
+                            <input type="checkbox" name="drink1" checked="true" value="Coke">Coke <br>
+                            <input type="checkbox" name="drink2" checked="true" value="CYB">Sprite <br>
+                            <input type="checkbox" name="drink3" checked="true" vaue="NE">Fruit Punch <br> 
+                            <input type="checkbox" name="drink4" checked="true" value="WD">lemonade
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <label for="cake">Cake:</label>
+                        </td>
+                        <td>
                             <select name="faveColor">
 
                                 <option value="red">Red</option>
@@ -134,57 +144,57 @@
                                 
                             </select>
                         </td>
-
-                    </tr>
-
-                    <!--radio buttons are a type of input, they are circular only ONE can be chosen out of set (set is determined by the name attribute values)-->
-                    <tr>
-                        <td>
-                            <label for="study">Program of Study:</label>
-                        </td>
-
-                        <td>
-                            <input type="radio" name="study" value="SE">Software Engineering <br>
-                            <input type="radio" name="study" value="CYB">Cybersecurity <br>
-                            <input type="radio" name="study" vaue="NE">Network Engineering <br> 
-                            <input type="radio" name="study" value="WD">Web Development
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <!--checkboxes allow for multiple responses -->
-                        <td>
-                            <label for="vehicle">Select Your Vehicles</label>
-                        </td>
-
-                        <td>
-                            <input type="checkbox" name="vehicle1" value="car">Car 
-                            <input type="checkbox" name="vehicle2" value="ship">Ship
-                            <input type="checkbox" name="vehicle3" value="horse">Horse
-                        </td>
                     </tr>
 
                     <tr>
                         <td>
-                            <label for="date">Date: </label>
-                        </td>
-
-                        <td>
-                            <input type="date" name="date">
-                        </td>
+                            <b>
+                                <h2>
+                                    <lable>Decorations</lable>
+                                </h2>
+                            </b>
+                       </td>
                     </tr>
-                    
+
                     <tr>
                         <td>
-
+                            <label for="faveColor">Color Scheme:</label>
                         </td>
+                        <td>
+                            <select name="faveColor">
+
+                                <option value="red">Red</option>
+                                <option value="orange">Orange</option>
+                                <option value="yellow">Yellow</option>
+                                
+                            </select>
+                        </td>
+                    </tr>
+
+                    <tr>
+
+                        <td>
+                            <label for="comments">Additional Comments:</label>
+                        </td>
+
+                        <td>
+                            <textarea name="comments" rows="10" cols="21" placeholder="Your comments here....">You can populate the textbox but user will need to delete</textarea>
+                        </td>
+
+                    </tr>
+
+                    <tr>
                         <td>
                             <input type="submit" value="SUBMIT">
                         </td>
                     </tr>
 
                 </tbody>
+
         </table>
+
     </form>
+
 </body>
+
 </html>
