@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Taylor Brown 202040">
+    <meta name="description" content="Week 6 JS Intro">
+    
+    <title>Week 6 | JS Intro</title>
+
+</head>
+
+<body>
+    <!--we should have some sort of HTML in the file-->
+    <h1>Week 6 Javascript Pay Calculator</h1>
+
+    <!--in document javascript-->
+
+    <script>
+    
+        var name = prompt(`Enter your name: `)
+        var rate = Number(prompt(`Enter your hourly rate `))
+        var hours = Number(prompt(`Enter your Hours worked this week `))
+        var tax = Number(prompt(`Enter your Tax Rate `))
+        
+
+        console.log(`Name entered: ${name}`)
+
+        //all data returned from prompt() is a STRING; must convert to Number() if we want to math
+        var gross = (rate * hours)*2
+        var totaltax = gross * tax
+        var net = gross - totaltax
+
+        alert(`Gross Pay: $${gross.toFixed(2)} \nTotal Taxes Deducted: $${totaltax.toFixed(2)} \nTotal Net Pay: $${net.toFixed(2)}`)
+
+        console.log(`Gross Pay: $${gross.toFixed(2)}`)
+        console.log(`Total Taxes Deducted: $${totaltax.toFixed(2)}`)
+        console.log(`Total Net Pay: $${net.toFixed(2)}`)
+
+    </script>
+
+</body>
+
+</html>
