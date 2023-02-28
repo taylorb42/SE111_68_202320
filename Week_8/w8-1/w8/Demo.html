@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 8 | Homework Assignment</title>
+</head>
+
+<body>
+
+    <h1>W8 --JavaScript Demo | Arrays & Objects</h1>
+
+    <div id="output">
+        
+    </div>
+
+    <script>
+        
+        //basic ket and value pair --> variable name = data value
+        var name = "Katie"
+        console.log(name)//displaying a single variable
+
+        //create a new populated array -- declaration + assignment 
+        var people = [
+            "Katie", 
+            "Jay",
+            "Spencer",
+            "Lugi",
+            "Dan"
+        ]
+
+        console.log(people)//display a single array
+        console.log(people[0])//access single value --> name + ket [index] = single value
+
+        //single values from arrays can be stored o variables
+        var firstName = people[0]
+        console.log(firstName)
+
+        console.log(`the length of the people array is ${people.length}`)
+
+
+
+        //add another name to the people array
+        people[5] = "Sebastian"
+        console.log(people)
+
+        //we can use anothe inherent property of arrays to add new values
+        people.push(`Ryan`) //in PYTHON --> listName.append()
+        console.log(people)
+
+        //ask user to supply a value add to the array
+        people.push(prompt(`Enter a name to the array:`))
+        console.log(people)
+
+        var color = [
+            `grey`,
+            `black`,
+            `red`,
+            `blue`,
+            `orange`,
+            `blue`,
+            `green`,
+            `pink`,
+            `violet`,
+        ]
+
+        console.log(`${people[2]}'s favorite color is ${color[2]}`)
+
+        //"automate population" -- like for file handling in Python
+        //start with empty arrays
+        var htmlClass = []
+        var indexArray = []
+
+        //process the entire array set at once
+        //ARRAY PROCESSING --> FOR LOOP (standard - 'for in' loop)
+        for(let index = 0; index < people.length; index++)
+        {
+            //below occurs to every value in the array
+            console.log(`INDEX: ${people[index]}'s fave color is ${color[index]}`)
+            htmlClass.push(`SE111.02`)
+            indexArray.push(index)
+        }
+
+        console.log("NAME   COLOR     CLASS")
+        for(let index = 0; index < people.length; index++)
+        {
+            console.log(`${people[index]}\t${htmlClass[index]}`)
+        }
+
+        //asscaiive arrays - instead of index, WE create a key string name index
+        var associativePeople = []
+        associativePeople[`first`]= `Katie`
+        associativePeople[`last`] = `Truchon`
+        associativePeople[`cat`] = `jack`
+
+        console.log(associativePeople[`cat`])
+
+
+        //OBJECTS---------------------------------------------------------------
+        //creat a new object -- mixed data types of informatin tha is all related to one main/core object
+        var person1 = {
+            first: `Katie`,
+            last: `Truchon`,
+            hasPets: true,
+            height: 64,
+            classes: [`SE111.02`,`SE111.221`,`SE111.68`,`GMW261`],
+            pets: {
+                dogs: [`George`,`Marlowe`],
+                cats: [`jack`]
+            },
+            //functions stord as a property in an object --> .METHOD
+            greeting: function() {
+                alert(`Hi there ${this.first} ${this.last}!`)
+            }
+        }
+
+        console.log(person1)
+        //
+        //
+        console.log(person1.height)//shows 64 in console
+        console.log(person1.classes)
+        console.log(person1.classes[2])
+        console.log(person1.pets)
+        console.log(person1.pets.dogs)
+        console.log(person1.pets.dogs[1])
+        console.log(person1.greeting())
+
+        //new object ----------------------------------------------------
+
+        var person2 = {
+            first: `Katie`,
+            last: `Truchon`,
+            hasPets: true,
+            height: 64,
+            classes: [`SE111.02`,`SE111.221`,`SE111.68`,`GMW261`],
+            pets: {
+                dogs: [`George`,`Marlowe`],
+                cats: [`jack`]
+            },
+            //functions stord as a property in an object --> .METHOD
+            greeting: function() {
+                alert(`Hi there ${this.first} ${this.last}!`)
+            }
+        }
+
+        console.log(person2)
+        //
+        //
+        console.log(person2.height)//shows 64 in console
+        console.log(person2.classes)
+        console.log(person2.classes[2])
+        console.log(person2.pets)
+        console.log(person2.pets.dogs)
+        console.log(person2.pets.dogs[1])
+        console.log(person2.greeting())
+
+        //OBJECTS use the `for in key` loop
+        //for now in file
+        for(let key in person1)
+        {
+            console.log(`${key}: ${person1[key]}`)
+        }
+
+
+        
+
+    </script>
+
+</body>
+</html>
