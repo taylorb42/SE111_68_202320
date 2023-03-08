@@ -3,32 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Week 8 | Homework Assignment</title>
+    <title>Week 8 | JS Objects</title>
 </head>
 <body>
+	<div id="wrapper">
 
-    <h1>List Of People</h1>
-	<p>
-		Please fill in the form and click the submit button.
-	</p>
-	<div>
-		<table>
-			<tr>
-				<td><label for="first">First Name</label></td>
-				<td><input id="first" type="text" name="first" placeholder="Ivan"></td>
-			</tr>
-			<tr>
-				<td><label for="last">Last Name</label></td>
-				<td><input id="last" type="text" name="last" placeholder="Drago"></td>
-			</tr>
-			<tr>
-				<td></td>
-				<td><input id="button" type="button" value="submit"></td>
-			</tr>
-		</table>
-	<div>
-	<div id="output">
-	
+		<h1>List Of People</h1>
+		<p>
+			Please fill in the form and click the submit button.
+		</p>
+		<div>
+			<table>
+				<tr>
+					<td><label for="first">First Name:</label></td>
+					<td><input id="first" type="text" name="first" placeholder="Ivan"></td>
+				</tr>
+				<tr>
+					<td><label for="last">Last Name:</label></td>
+					<td><input id="last" type="text" name="last" placeholder="Drago"></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td><input id="button" type="button" value="Submit"></td>
+				</tr>
+			</table>
+		<div>
+		<div id="output">
+		
+		</div>
+
 	</div>
 
 	<!--The script tag should go after the HMTL, but inside of the body.-->
@@ -36,13 +39,14 @@
     <script>
 	
 		//Store the elements (tags) in variables
-		
+		var fname = document.querySelector(`#first`)
+		var lname = document.querySelector(`#last`)
 
 		//Make an array to store the people
-		
+		var people = []
 
 		//Make the button clickable. When clicked it calls the calcAndDisplay function.
-		
+		document.querySelector('#button').addEventListener('click', calcAndDisplay)
 		
 		/*-----------------------------------------------------
 		Will add objects into the people array. 
@@ -68,7 +72,8 @@
 
             var person = {
 
-
+				first: fname.value,
+				last: lname.value
 
             }//end of person object
 
@@ -76,10 +81,9 @@
 
 
 			//Add the person object into the people array by using the .push() array method.
-			
+			people.push(person)
 
 			//Bubble sort people on the last name
-			//DO NOT TOUCH IT
 			for(let i=0; i < people.length-1; i++)
 			{
 				for(let j=0; j < people.length-1; j++)
@@ -94,13 +98,14 @@
 			}//end of bubble sort algorithm!
 
 			//console.log the people array to check that the people array is formatted correctly and is populated with the correct objects
+			console.log(people)
 			
 
 			//create a variable called 'output' that has an empty string value stored to 
-			
+			var output = ''
 
 			//Loop through the objects in the people array
-			for()
+			for(let i = 0; i < people.length; i++)
             {
 
 				//Loop through each property in the object
@@ -110,63 +115,21 @@
 					//Output will resemble:
 					//FIRST: Ivan
 					//LAST: Drago
-				
+					output += `<p><b>${key}:</b> ${people[i][key]}</p>`
 
                 }
                 //add a <hr> to the output at the end of this outter loop so a horizontal rule is displayed inbetween each person being displayed to the screen.
-				
+				output += '<hr>'
 
 
 			}//end of loop going through people array to edit 'output'
 
 				//log the output string
 				//replace the outputDiv's inner HTML with the output string
+				document.querySelector(`#output`).innerHTML = output
 				
-
-
-
 		}
-		//NOTES FOR HOMEWORK W8 ASSIGNMENT--------------------------------------------------------------------------
-
-		//Create an array populated with person1 Object
-		var humans = [
-			person1,
-			person2
-		]
-		
-		var person3 = {
-			first: `Cam`,
-			last: `Arabo`,
-			age: 27,
-			height: 70,
-			classes: [`SE111.02`],
-			pets: {dogs: [`thor`,`Valkyrie`], cats:[]}
-		}
-
-		humans.push(person3)
-
-
-		for(let i = 0; i < humans.length; i++)
-		{
-			//his outter loop moves through the diff values stored to the array
-			//since they ar objects, we need an additional loop
-			output += `<h3>INFO FOR ${humans[i].first}:</h3>`
-
-			for(let key in humans[i])
-			{
-				//this loop displays each key + value pair within the current object, humans[i]
-				output += `<p><b>${key}:</b> ${humans[i][key]}</p>`
-			}
-
-			output += `<br>`
-		}
-
-		document.querySelector(`#submit`).addEventListener(`click`,calcAndDisplay)
-
-		//write the list to the page
-
-
-
+	
     </script>
     
 </body>
